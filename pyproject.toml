@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "iq-eq-test"
+version = "0.1.0"
+description = ""
+authors = ["MurodZM <ziyabaev_1996@mail.ru>"]
+readme = "README.md"
+packages = [{include = "iq_eq_test"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^4.2.2"
+psycopg2 = "^2.9.6"
+djangorestframework = "^3.14.0"
+django-filter = "^23.2"
+markdown = "^3.4.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

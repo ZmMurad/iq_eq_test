@@ -16,8 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-
+from core.views import login_get,eq_test,iq_test, finish_page
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/', include("core.urls")),
+    path("",login_get,name="homepage"),
+    path('eq_test',eq_test,name="eq_test"),
+    path('iq_test',iq_test,name="iq_test"),
+    path("finish", finish_page,name="finish")
+    
+    
 ]

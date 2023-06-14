@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Получение логина{% endblock title %}
+{% block content %}
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <main class="px-3">
+        <h1>Результаты {{login}}</h1>
+        <p>Ваше время IQ Теста и баллы</p>
+        <p>{{time_iq}} {{test_score}}</p>
+        <p>Ваше время EQ Теста и Результат</p>
+        <p>{{time_eq}} {{test_result}}</p>
+    </main>
+    <a href="/"> Вернуться на главную</a>
+</div>
+{% endblock content %}

@@ -10,11 +10,11 @@ class Unique_Login(models.Model):
 
 class IQ_Test(models.Model):
     score=models.IntegerField(validators=[MinValueValidator(0),MaxValueValidator(50)])
-    login_f=models.ForeignKey(Unique_Login, on_delete=models.CASCADE, unique=True)
+    login_f=models.OneToOneField(Unique_Login, on_delete=models.CASCADE)
     date_passed=models.DateTimeField(auto_now=True)
     
 class EQ_Test(models.Model):
     result=models.CharField(max_length=5)
-    login_f=models.ForeignKey(Unique_Login, on_delete=models.CASCADE, unique=True)
+    login_f=models.OneToOneField(Unique_Login, on_delete=models.CASCADE)
     date_passed=models.DateTimeField(auto_now=True)
     

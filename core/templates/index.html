@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Получение логина{% endblock title %}
+{% block content %}
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <main class="px-3">
+        <h1>Нажмите кнопку для получения уникального логина</h1>
+        <form method="post">
+            {% csrf_token %}
+        <p class="lead"> <input type="submit" name="get_login" value="Получить" class="btn btn-lg btn-light fw-bold border-white bg-white"></p>
+        </form>
+        <h1>Заполните поле и нажмите кнопку для получения информации о логине</h1>
+        <form method="post">
+            {% csrf_token %}
+            <p><label for="login_r">Введите данные логина</label><input name="login_form" id="login_r" type="text"></p>
+        <p class="lead"> <input type="submit" name="send_login" value="Получить" class="btn btn-lg btn-light fw-bold border-white bg-white"></p>
+        </form>
+    </main>
+</div>
+{% endblock content %}
+
